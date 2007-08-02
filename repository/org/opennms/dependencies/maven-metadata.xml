@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?><metadata>
+  <groupId>org.opennms</groupId>
+  <artifactId>dependencies</artifactId>
+  <version>1.3.3</version>
+  <versioning>
+    <release>1.3.3</release>
+    <versions>
+      <version>1.3.3</version>
+    </versions>
+    <lastUpdated>20070619233612</lastUpdated>
+  </versioning>
+</metadata>

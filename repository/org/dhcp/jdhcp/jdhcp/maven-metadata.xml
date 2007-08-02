@@ -1,0 +1,11 @@
+<metadata>
+  <groupId>org.dhcp.jdhcp</groupId>
+  <artifactId>jdhcp</artifactId>
+  <version>1.1.1</version>
+  <versioning>
+    <versions>
+      <version>1.1.1</version>
+    </versions>
+    <lastUpdated>20051206143219</lastUpdated>
+  </versioning>
+</metadata>
