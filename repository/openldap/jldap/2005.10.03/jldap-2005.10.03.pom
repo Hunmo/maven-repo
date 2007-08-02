@@ -1,6 +1,0 @@
-<project>
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>openldap</groupId>
-  <artifactId>jldap</artifactId>
-  <version>2005.10.03</version>
-</project>
