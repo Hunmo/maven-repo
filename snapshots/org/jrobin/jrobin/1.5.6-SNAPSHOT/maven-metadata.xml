@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?><metadata>
+  <groupId>org.jrobin</groupId>
+  <artifactId>jrobin</artifactId>
+  <version>1.5.6-SNAPSHOT</version>
+  <versioning>
+    <snapshot>
+      <timestamp>20070802.162414</timestamp>
+      <buildNumber>4</buildNumber>
+    </snapshot>
+    <lastUpdated>20070802162418</lastUpdated>
+  </versioning>
+</metadata>

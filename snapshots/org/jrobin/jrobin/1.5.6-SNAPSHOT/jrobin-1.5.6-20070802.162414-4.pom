@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>org.jrobin</groupId>
+  <artifactId>jrobin</artifactId>
+  <name>jrobin</name>
+  <version>1.5.6-SNAPSHOT</version>
+  <packaging>jar</packaging>
+  <url>http://www.jrobin.org</url>
+  <build>
+    <sourceDirectory>src</sourceDirectory>
+    <resources>
+      <resource>
+        <directory>fonts</directory>
+      </resource>
+    </resources>
+    <plugins>
+      <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <configuration>
+          <source>1.5</source>
+          <target>1.5</target>
+        </configuration>
+      </plugin>
+      <plugin>
+        <artifactId>maven-deploy-plugin</artifactId>
+        <configuration>
+          <repositoryId>opennms-repo</repositoryId>
+          <!-- <repositoryId>opennms-snapshot-repo</repositoryId> -->
+          <file>jrobin.jar</file>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-javadoc-plugin</artifactId>
+        <executions>
+          <execution>
+            <goals>
+              <goal>jar</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <artifactId>maven-source-plugin</artifactId>
+        <executions>
+          <execution>
+            <goals>
+              <goal>jar</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+  <reporting>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-javadoc-plugin</artifactId>
+      </plugin>
+    </plugins>
+  </reporting>
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+  <distributionManagement>
+  <!-- use the following if you're not using a snapshot version. -->
+  <repository>
+    <id>opennms-repo</id>
+    <name>OpenNMS Release Repository</name>
+    <url>scpexe://repo.opennms.org/var/www/sites/opennms.org/site/repo/maven2</url>
+  </repository>
+  <!-- use the following if you ARE using a snapshot version. -->
+  <snapshotRepository>
+    <id>opennms-snapshot-repo</id>
+    <name>OpenNMS Snapshot Repository</name>
+    <url>scpexe://repo.opennms.org/var/www/sites/opennms.org/site/repo/snapshots</url>
+  </snapshotRepository>
+</distributionManagement>
+</project>
