@@ -1,0 +1,7 @@
+<project>
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>net.sf.jradius</groupId>
+  <artifactId>jradius-client</artifactId>
+  <name>JRadius Java Clent API</name>
+  <version>20040211</version>
+</project>

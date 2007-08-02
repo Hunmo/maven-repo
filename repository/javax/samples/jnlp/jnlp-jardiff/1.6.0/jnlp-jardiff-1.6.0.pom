@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><project>
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>javax.samples.jnlp</groupId>
+  <artifactId>jnlp-jardiff</artifactId>
+  <name>JNLP JarDiff Utility</name>
+  <version>1.6.0</version>
+  <build>
+    <plugins>
+      <plugin>
+        <artifactId>maven-jar-plugin</artifactId>
+        <configuration>
+          <archive>
+            <manifest>
+              <mainClass>jnlp.sample.jardiff.JarDiff</mainClass>
+            </manifest>
+          </archive>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+  <distributionManagement>
+    <repository>
+      <id>opennms-repo</id>
+      <name>OpenNMS Maven Repository</name>
+      <url>scpexe://repo.opennms.org/var/www/sites/opennms.org/site/repo/maven2</url>
+    </repository>
+    <status>deployed</status>
+  </distributionManagement>
+</project>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><metadata>
+  <groupId>openldap</groupId>
+  <artifactId>jldap</artifactId>
+  <version>2005.10.03</version>
+  <versioning>
+    <versions>
+      <version>2005.10.03</version>
+    </versions>
+    <lastUpdated>20051219214821</lastUpdated>
+  </versioning>
+</metadata>
