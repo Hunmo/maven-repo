@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>org.opennms</groupId>
+  <artifactId>jicmp-api</artifactId>
+  <version>1.0.2-SNAPSHOT</version>
+  <packaging>jar</packaging>
+  <name>OpenNMS ICMP API</name>
+  <build>
+   <extensions>
+     <extension>
+       <groupId>org.apache.maven.wagon</groupId>
+       <artifactId>wagon-scm</artifactId>
+       <version>1.0-beta-3-SNAPSHOT</version>
+     </extension>
+     <extension>
+       <groupId>org.apache.maven.scm</groupId>
+       <artifactId>maven-scm-provider-svnexe</artifactId>
+       <version>1.0</version>
+     </extension>
+   </extensions>
+    <plugins>
+      <plugin>
+        <artifactId>maven-deploy-plugin</artifactId>
+        <configuration>
+          <file>jicmp.jar</file>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+  <repositories>
+    <repository>
+      <id>apache.snapshots</id>
+      <name>Apache Snapshot Repository</name>
+      <url>http://people.apache.org/maven-snapshot-repository</url>
+    </repository>
+  </repositories>
+  <pluginRepositories>
+    <pluginRepository>
+      <id>apache.snapshots</id>
+      <name>Apache Snapshot Repository</name>
+      <url>http://people.apache.org/maven-snapshot-repository</url>
+    </pluginRepository>
+  </pluginRepositories>
+  <distributionManagement>
+    <site>
+      <id>opennms-site</id>
+      <name>OpenNMS Build Website</name>
+      <url>scm:svn:https://opennms.svn.sourceforge.net/svnroot/opennms/maven-repo/trunk/site/${project.artifactId}/${project.version}</url>
+    </site>
+    <repository>
+      <id>opennms-repo</id>
+      <name>OpenNMS Maven Repository</name>
+      <url>scm:svn:https://opennms.svn.sourceforge.net/svnroot/opennms/maven-repo/trunk/repository</url>
+    </repository>
+    <snapshotRepository>
+      <id>opennms-snapshots</id>
+      <name>OpenNMS Snapshot Maven Repository</name>
+      <url>scm:svn:https://opennms.svn.sourceforge.net/svnroot/opennms/maven-repo/trunk/snapshots</url>
+    </snapshotRepository>
+  </distributionManagement>
+</project>
