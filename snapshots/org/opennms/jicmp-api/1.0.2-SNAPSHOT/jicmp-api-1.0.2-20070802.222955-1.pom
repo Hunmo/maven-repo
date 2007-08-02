@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>org.opennms</groupId>
+  <artifactId>jicmp-api</artifactId>
+  <version>1.0.2-SNAPSHOT</version>
+  <packaging>jar</packaging>
+  <name>OpenNMS ICMP API</name>
+  <scm>
+    <connection>scm:svn:https://opennms.svn.sourceforge.net/svnroot/opennms/maven-repo/trunk/repository</connection>
+    <developerConnection>scm:svn:https://opennms.svn.sourceforge.net/svnroot/opennms/maven-repo/trunk/snapshots</developerConnection>
+    <url>http://opennms.svn.sourceforge.net/viewvc/opennms/jicmp</url>
+  </scm>
+  <build>
+    <plugins>
+<!--
+      <plugin>
+        <artifactId>maven-deploy-plugin</artifactId>
+        <configuration>
+          <repositoryId>opennms-repo</repositoryId>
+          <url>scpexe://repo.opennms.org/var/www/sites/opennms.org/site/repo/maven2</url>
+          <file>jicmp.jar</file>
+          <pomFile>pom.xml</pomFile>
+        </configuration>
+      </plugin>
+-->
+    </plugins>
+    <extensions>
+      <extension>
+        <groupId>org.apache.maven.wagon</groupId>
+        <artifactId>wagon-scm</artifactId>
+        <version>1.0-beta-3-SNAPSHOT</version>
+      </extension>
+      <extension>
+        <groupId>org.apache.maven.scm</groupId>
+        <artifactId>maven-scm-provider-svnexe</artifactId>
+        <version>1.0</version>
+      </extension>
+    </extensions>
+  </build>
+  <distributionManagement>
+    <site>
+      <id>OpenNMS Site</id>
+      <url>scm:svn:https://opennms.svn.sourceforge.net/svnroot/opennms/maven-repo/trunk/site</url>
+    </site>
+    <repository>
+      <id>opennms-repo</id>
+      <name>OpenNMS Maven Repository</name>
+      <url>scm:svn:https://opennms.svn.sourceforge.net/svnroot/opennms/maven-repo/trunk/repository</url>
+    </repository>
+    <snapshotRepository>
+      <id>opennms-snapshots</id>
+      <name>OpenNMS Snapshot Maven Repository</name>
+      <url>scm:svn:https://opennms.svn.sourceforge.net/svnroot/opennms/maven-repo/trunk/snapshots</url>
+    </snapshotRepository>
+  </distributionManagement>
+  <repositories>
+    <repository>                                                                                                                                                             
+      <releases />                                                                                                                                                                 
+      <snapshots />                                                                                                                                                                
+      <id>codehaus-snapshots</id>                                                                                                                                                  
+      <name>Maven/Codehaus Snapshot Repository</name>                                                                                                                              
+      <url>http://snapshots.repository.codehaus.org</url>                                                                                                                          
+    </repository>                                                                                                                                                            
+    <repository>
+      <snapshots />
+      <id>apache.snapshots</id>
+      <name>Apache Snapshot Repository</name>
+      <url>http://people.apache.org/maven-snapshot-repository</url>
+    </repository>
+  </repositories>
+  <pluginRepositories>
+    <pluginRepository>                                                                                                                                                             
+      <releases />                                                                                                                                                                 
+      <snapshots />                                                                                                                                                                
+      <id>codehaus-snapshots</id>                                                                                                                                                  
+      <name>Maven/Codehaus Snapshot Repository</name>                                                                                                                              
+      <url>http://snapshots.repository.codehaus.org</url>                                                                                                                          
+    </pluginRepository>                                                                                                                                                            
+    <pluginRepository>
+      <snapshots />
+      <id>apache.snapshots</id>
+      <name>Apache Snapshot Repository</name>
+      <url>http://people.apache.org/maven-snapshot-repository</url>
+    </pluginRepository>
+  </pluginRepositories>
+</project>
